@@ -1,17 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Web site created using create-react-app"
+        />
+        <link rel="stylesheet" href="./styles/index.scss">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Fredoka:wght@300..700&family=Great+Vibes&family=Hubballi&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>chat-react</title>
+    </head>
+    <body>   
+        
+        
+        <div id="root"></div>
 
-    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-    <link rel="shortcut icon" href="favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="favicon/site.webmanifest" />
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+        
+
+        <!-- <div class="chat">
+            <div class="chat__item">
+                <nav class="chat__nav">
+                    <ul class="chat__ul">
+                        <li class="chat__ul-item">
+                            <div class="chat__ul-img">
+                                <img src="./assets/icons/home.png" alt="icon">
+                            </div>
+                            <div class="chat__ul-title">Home</div>
+                        </li>
+                        <li class="chat__ul-item">
+                            <div class="chat__ul-img">
+                                <img src="./assets/icons/chat.png" alt="icon">                                
+                            </div>
+                            <div class="chat__ul-title">Messages</div>
+                        </li>
+                        <li class="chat__ul-item">
+                            <div class="chat__ul-img">
+                                <img src="./assets/icons/group-users.png" alt="icon">
+                            </div>
+                            <div class="chat__ul-title">Profile</div>
+                        </li>
+                        <li class="chat__ul-item">
+                            <div class="chat__ul-img">
+                                <img src="./assets/icons/settings.png" alt="icon">
+                            </div>
+                            <div class="chat__ul-title">Settings</div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+            <div class="chat__item">
+                <div class="chat__flex">
+                    <div class="chat__flex-item">
+                        <div class="chat__flex-title">Conversations (3)</div>
+                        <button class="chat__flex-new">
+                            New conversation
+                        </button>
+                    </div>
+                    <div class="chat__flex-item">
+                        <div class="div">
+                            <input type="text" class="chat__flex-input" placeholder="Search...">
+                            <div class="chat__flex-img">
+                                <img src="./assets/icons/magnifying-glass.png" alt="glass">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="chat__wrap">
+                    <li class="chat__conversation">
+                        <div class="chat__conversation-stick"></div>
+                        <div class="chat__avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__info">
+                            <div class="chat__header">
+                                <div class="chat__name">Conversation</div>
+                                <div class="chat__time">12:45</div>
+                            </div>
+                            <div class="chat__footer">
+                                <div class="chat__last-message">Alex: I would like to share my...</div>
+                                <div class="chat__new-message"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat__conversation">
+                        <div class="chat__conversation-stick"></div>
+                        <div class="chat__avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__info">
+                            <div class="chat__header">
+                                <div class="chat__name">Conversation</div>
+                                <div class="chat__time">12:45</div>
+                            </div>
+                            <div class="chat__footer">
+                                <div class="chat__last-message">Alex: I would like to share my...</div>
+                                <div class="chat__new-message"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat__conversation">
+                        <div class="chat__conversation-stick"></div>
+                        <div class="chat__avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__info">
+                            <div class="chat__header">
+                                <div class="chat__name">Conversation</div>
+                                <div class="chat__time">12:45</div>
+                            </div>
+                            <div class="chat__footer">
+                                <div class="chat__last-message">Alex: I would like to share my...</div>
+                                <div class="chat__new-message"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat__conversation">
+                        <div class="chat__conversation-stick"></div>
+                        <div class="chat__avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__info">
+                            <div class="chat__header">
+                                <div class="chat__name">Conversation</div>
+                                <div class="chat__time">12:45</div>
+                            </div>
+                            <div class="chat__footer">
+                                <div class="chat__last-message">Alex: I would like to share my...</div>
+                                <div class="chat__new-message"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat__conversation">
+                        <div class="chat__conversation-stick"></div>
+                        <div class="chat__avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__info">
+                            <div class="chat__header">
+                                <div class="chat__name">Conversation</div>
+                                <div class="chat__time">12:45</div>
+                            </div>
+                            <div class="chat__footer">
+                                <div class="chat__last-message">Alex: I would like to share my...</div>
+                                <div class="chat__new-message"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat__conversation">
+                        <div class="chat__conversation-stick"></div>
+                        <div class="chat__avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__info">
+                            <div class="chat__header">
+                                <div class="chat__name">Conversation</div>
+                                <div class="chat__time">12:45</div>
+                            </div>
+                            <div class="chat__footer">
+                                <div class="chat__last-message">Alex: I would like to share my...</div>
+                                <div class="chat__new-message"></div>
+                            </div>
+                        </div>
+                    </li><li class="chat__conversation">
+                        <div class="chat__conversation-stick"></div>
+                        <div class="chat__avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__info">
+                            <div class="chat__header">
+                                <div class="chat__name">Conversation</div>
+                                <div class="chat__time">12:45</div>
+                            </div>
+                            <div class="chat__footer">
+                                <div class="chat__last-message">Alex: I would like to share my...</div>
+                                <div class="chat__new-message"></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="chat__conversation">
+                        <div class="chat__conversation-stick"></div>
+                        <div class="chat__avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__info">
+                            <div class="chat__header">
+                                <div class="chat__name">Conversation</div>
+                                <div class="chat__time">12:45</div>
+                            </div>
+                            <div class="chat__footer">
+                                <div class="chat__last-message">Alex: I would like to share my...</div>
+                                <div class="chat__new-message"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat__conversation">
+                        <div class="chat__conversation-stick"></div>
+                        <div class="chat__avatar">
+                            <img src="./assets/img/ava2.jpg" alt="ava">
+                        </div>
+                        <div class="chat__info">
+                            <div class="chat__header">
+                                <div class="chat__name">Chat name</div>
+                                <div class="chat__time">14:20</div>
+                            </div>
+                            <div class="chat__footer">
+                                <div class="chat__last-message">Daisy Fitzroy: Wow great, how...</div>
+                                <div class="chat__new-message"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat__conversation">
+                        <div class="chat__conversation-stick"></div>
+                        <div class="chat__avatar">
+                            <img src="./assets/img/ava3.jpg" alt="ava">
+                        </div>
+                        <div class="chat__info">
+                            <div class="chat__header">
+                                <div class="chat__name">Meeting chat</div>
+                                <div class="chat__time">14:45</div>
+                            </div>
+                            <div class="chat__footer">
+                                <div class="chat__last-message">You: Feel free to ask any ques...</div>
+                                <div class="chat__new-message"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="chat__item">
+                <div class="chat__tools">
+                    <div class="chat__tools_avatar">
+                        <img src="./assets/img/ava1.jpg" alt="ava">
+                    </div>
+                    <div class="chat__tools_name">Team Chat</div>
+                    <div class="chat__tools_setings">···</div>
+                </div>
+                <div class="chat__field">
+
+                    <div class="chat__message">
+                        <div class="chat__message_avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__message_content">
+                            <div class="chat__message_info">
+                                <div class="chat__message_name">Corvo Attano</div>
+                                <div class="chat__message_date">10 May, 11:45</div>
+                            </div>
+                            <div class="chat__message_text">Greetings, fellow colleagues. I would like to share my insights on this task. I .</div>
+                        </div>
+                    </div>
+
+
+                    <div class="chat__message chat__message_me">
+                        <div class="chat__message_content">
+                            <div class="chat__message_info">
+                                <div class="chat__message_name">Corvo Attano</div>
+                                <div class="chat__message_date">10 May, 11:45</div>
+                            </div>
+                            <div class="chat__message_text">Greetings, fellow colleagues. I would like to share my insights on this task. I reckon we should deal with at least half of the points in the plan without further delays. I suggest proceeding from one point to the next and notifying the rest of us with at least short notices. This way is best to keep track of who is doing what.</div>
+                        </div>
+                        <div class="chat__message_avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                    </div>
+                                        <div class="chat__message">
+                        <div class="chat__message_avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__message_content">
+                            <div class="chat__message_info">
+                                <div class="chat__message_name">Corvo Attano</div>
+                                <div class="chat__message_date">10 May, 11:45</div>
+                            </div>
+                            <div class="chat__message_text">Greetings, fellow colleagues. I would like to share my insights on this task. I .</div>
+                        </div>
+                    </div>
+
+
+                    <div class="chat__message chat__message_me">          
+                        <div class="chat__message_avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__message_content">
+                            <div class="chat__message_info">
+                                <div class="chat__message_name">Corvo Attano</div>
+                                <div class="chat__message_date">10 May, 11:45</div>
+                            </div>
+                            <div class="chat__message_text">Greetings, fellow colleagues. I would like to share my insights on this task. I reckon we should deal with at least half of the points in the plan without further delays. I suggest proceeding from one point to the next and notifying the rest of us with at least short notices. This way is best to keep track of who is doing what.</div>
+                        </div>
+                    </div>
+
+                    <div class="chat__message">
+                        <div class="chat__message_avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__message_content">
+                            <div class="chat__message_info">
+                                <div class="chat__message_name">Corvo Attano</div>
+                                <div class="chat__message_date">10 May, 11:45</div>
+                            </div>
+                            <div class="chat__message_text">Greetings, fellow colleagues. I would like to share my insights on this task. I .</div>
+                        </div>
+                    </div>
+
+
+                    <div class="chat__message chat__message_me">
+                        <div class="chat__message_content">
+                            <div class="chat__message_info">
+                                <div class="chat__message_name">Corvo Attano</div>
+                                <div class="chat__message_date">10 May, 11:45</div>
+                            </div>
+                            <div class="chat__message_text">Greetings, fellow colleagues. I would like to share my insights on this task. I reckon we should deal with at least half of the points in the plan without further delays. I suggest proceeding from one point to the next and notifying the rest of us with at least short notices. This way is best to keep track of who is doing what.</div>
+                        </div>
+                        <div class="chat__message_avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                    </div>
+                                        <div class="chat__message">
+                        <div class="chat__message_avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__message_content">
+                            <div class="chat__message_info">
+                                <div class="chat__message_name">Corvo Attano</div>
+                                <div class="chat__message_date">10 May, 11:45</div>
+                            </div>
+                            <div class="chat__message_text">Greetings, fellow colleagues. I would like to share my insights on this task. I .</div>
+                        </div>
+                    </div>
+
+
+                    <div class="chat__message chat__message_me">          
+                        <div class="chat__message_avatar">
+                            <img src="./assets/img/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="chat__message_content">
+                            <div class="chat__message_info">
+                                <div class="chat__message_name">Corvo Attano</div>
+                                <div class="chat__message_date">10 May, 11:45</div>
+                            </div>
+                            <div class="chat__message_text">Greetings, fellow colleagues. I would like to share my insights on this task. I reckon we should deal with at least half of the points in the plan without further delays. I suggest proceeding from one point to the next and notifying the rest of us with at least short notices. This way is best to keep track of who is doing what.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat__input">
+                    <textarea name="message" placeholder="Type here..."></textarea>
+                    <button class="chat__input_button">Send</button>
+                </div>
+            </div>
+        </div> -->
+    </body>
 </html>

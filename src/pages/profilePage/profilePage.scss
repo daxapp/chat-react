@@ -1,0 +1,80 @@
+@import "../../styles/_variables.scss";
+
+.profile-page {
+    padding: 20px 40px;
+    width: 80%;
+    color: $defaultTextColor;
+    &__title {
+        font-size: 40px;
+        text-align: center;
+        font-weight: 700;
+    }
+    &__info {
+        font-size: 20px;
+        margin-top: 20px;
+        span {
+            font-weight: 700; 
+            user-select: none;
+        }
+    }
+    &__foto {
+        display: flex;
+        align-items: center;
+    }
+    &__ava {
+        height: 100px;
+        width: 100px;
+        display: block;
+        user-select: none;
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    &__change {
+        user-select: none;
+        background-color: #1CA1C1;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        padding: 0 6px;
+        width: 150px;
+        height: 32px;
+        border: none;
+        border-radius: 2px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-left: 20px;
+        &:hover {
+            background-color: #1992af;
+        }
+        &:disabled {
+            background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
+            color: light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
+            border-color: light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
+            cursor: not-allowed;
+        }
+    }
+}
+
+.img-container {
+    margin: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-around;
+    div {
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+    }
+    .active {
+
+        box-shadow: 0 0 10px 4px rgba(0, 183, 255, 0.75);
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease-in-out;
+    }
+}
