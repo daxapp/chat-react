@@ -12,7 +12,7 @@ import TextFieldInput from '../textFieldInput/textFieldInput';
  
 const TextField = memo(() => {
     const {currentCompanion, messages, conversationsData, isModal} = useTypedSelector(state => state.chat)
-    const {photoUrl} = useTypedSelector(state => state.profile)
+    const {photoUrl, name} = useTypedSelector(state => state.profile)
     const {currentUser} = useTypedSelector(state => state.auth)
     const { users } = useHttp();
     const {convertPhoto} = usePhoto()
@@ -59,7 +59,7 @@ const TextField = memo(() => {
         return messages?.map(({displayName, text, createdAt, uidSender, messageId}) => {
             return <MessageItem 
                         key={messageId}
-                        name={currentUser?.changedName || displayName}
+                        name={currentUser?.uid === uidSender ? currentUser?.changedName || displayName : userCompanion?.changedName || displayName}
                         avatar={currentUser?.uid === uidSender ? currentUser?.changedPhoto : userCompanion?.changedPhoto}
                         message={text}
                         isMine={currentUser?.uid === uidSender}
