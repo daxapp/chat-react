@@ -1,4 +1,4 @@
-# Chat React
+# Chat React - https://react-chat-by-dmyrto.web.app/
 
 Chat React is a personal project designed to explore real-time chat functionality using React and Firestore. The goal of this project is to gain hands-on experience with Firebase services, authentication, and state management while building an interactive messaging platform.
 
